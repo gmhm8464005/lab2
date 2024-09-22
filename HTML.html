@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Катерина Іщук - Персональна Сторінка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        header, nav, section {
+            margin-bottom: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+        /* Стиль для фото ліворуч */
+        img {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            float: left; /* Вирівнювання зображення ліворуч */
+            margin-right: 20px; /* Відступ між фото та текстом */
+            margin-bottom: 10px; /* Відступ знизу для гарного вигляду */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Вітаю!</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Головна</a></li>
+            <li><a href="#" onclick="showSection('about')">Про мене</a></li>
+            <li><a href="#" onclick="showSection('contacts')">Контакти</a></li>
+        </ul>
+    </nav>
+    <section id="home" class="visible">
+        <img src="photo_2024-09-22_13-32-32.jpg" alt="Катерина Іщук">
+        <h2>Головна сторінка</h2>
+        <p>Я Іщук Катерина Максимівна, вітаю на моїй сторінці!</p>
+    </section>
+    <section id="about" class="hidden">
+        <h2>Про мене</h2>
+        <p>Ім'я: Іщук Катерина Максимівна</p>
+        <p>Освіта: Студентка групи Б-125-23-2-БІ Національного Авіаційного Університету</p>
+        <p>Улюблені книжки: "Безніч", "За ситуаціями", "Морт"</p>
+    </section>
+    <section id="contacts" class="hidden">
+        <h2>Контактна інформація</h2>
+        <p>Email: 8464005@stud.nau.edu.ua</p>
+        <p>Телефон: +380123456789</p>
+       
+        <h3>Форма зворотного зв’язку</h3>
+        <form action="mailto:8541620@stud.nau.edu.ua" method="post" enctype="text/plain">
+            <label for="name">Ім'я:</label><br>
+            <input type="text" id="name" name="name" required><br>
+           
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+           
+            <label for="message">Повідомлення:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+           
+            <input type="submit" value="Відправити">
+            <input type="reset" value="Скинути">
+        </form>
+    </section>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+        showSection('home');
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
